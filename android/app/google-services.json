@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "420439846804",
+    "project_id": "dream-lounge",
+    "storage_bucket": "dream-lounge.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420439846804:android:afd44dc3d337cceea42981",
+        "android_client_info": {
+          "package_name": "com.divnectar.cashflow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420439846804-bcv7ggdfd8hvs967ns2rohak9b8r8prk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADzbeVqHs9IyrXkCR4uCc5XQGEPom5fyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420439846804-bcv7ggdfd8hvs967ns2rohak9b8r8prk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
