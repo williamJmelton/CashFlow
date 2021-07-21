@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 // Import the firebase_core plugin
 import 'package:firebase_core/firebase_core.dart';
-
-import 'package:cashflow/forms/newLoad.dart';
-import 'package:cashflow/transactionFeed.dart';
+import 'package:cashflow/screens/homeScreen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -43,34 +41,6 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            MyCustomForm(),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
 class AppWrapper extends StatefulWidget {
   @override
   _AppWrapperState createState() => _AppWrapperState();
@@ -83,7 +53,7 @@ class AppWrapper extends StatefulWidget {
         primarySwatch: Colors.green,
         backgroundColor: Colors.black,
       ),
-      home: MyHomePage(title: 'Cash-Flow'),
+      home: HomeScreen(title: 'Cash-Flow'),
     );
   }
 }
@@ -99,7 +69,10 @@ class _AppWrapperState extends State<AppWrapper> {
       builder: (context, snapshot) {
         // Check for errors
         if (snapshot.hasError) {
-          return Text('Error');
+          return Text(
+            'Error',
+            textDirection: TextDirection.ltr,
+          );
         }
 
         // Once complete, show your application
@@ -110,12 +83,15 @@ class _AppWrapperState extends State<AppWrapper> {
               primarySwatch: Colors.green,
               backgroundColor: Colors.black,
             ),
-            home: MyHomePage(title: 'Cash-Flow'),
+            home: HomeScreen(title: 'Cash-Flow'),
           );
         }
 
         // Otherwise, show something whilst waiting for initialization to complete
-        return Text('Loading');
+        return Text(
+          'Loading',
+          textDirection: TextDirection.ltr,
+        );
       },
     );
   }
